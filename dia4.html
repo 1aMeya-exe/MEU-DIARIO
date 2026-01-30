@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+    body{
+        background-image: -moz-linear-gradient(rgb(255, 168, 213),rgb(255, 213, 220));
+    }
+
+
+   </style>
+
+</head>
+<body>
+
+<nav style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+">
+        <image style="height: 90px; width: 90px;"      src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Pink_Bow_PNG_Transparent_Clipart.png"></image>
+        <h1 style="text-align: center; color: rgb(192, 125, 255);">Diário Maneirinho</h1>
+        <image style="height: 90px; width: 90px;"      src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Pink_Bow_PNG_Transparent_Clipart.png"></image>
+   
+</nav>
+
+    <table style='display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;'>
+        <td>
+            <input id="diario" style="color: darksalmon;" type="text">
+            <button id="salva" onclick="salvar()">Salvar</button>
+            <button id="apaga" onclick="apagar()">Apaga</button>
+            <p style="color: rgb(134, 86, 112);" id="mostra"></p>
+        </td>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img width="100px" height="90px"  src="https://thumbs.dreamstime.com/z/gatinho-branco-com-uma-fita-cor-de-rosa-em-um-fundo-branco-31770958.jpg">
+    <img height="100px" width="110px"  src="https://st.depositphotos.com/1032124/5153/i/950/depositphotos_51535791-stock-photo-kitten-with-a-pink-bow.jpg">
+    <img width="120px" height="110px" src="https://st.depositphotos.com/1032124/3111/i/950/depositphotos_31113355-stock-photo-the-cat-with-a-pink.jpg">
+    <img width="100px" height="90px"  src="https://thumbs.dreamstime.com/z/gatinho-branco-com-uma-fita-cor-de-rosa-em-um-fundo-branco-31770958.jpg">
+    <img height="100px" width="110px"  src="https://st.depositphotos.com/1032124/5153/i/950/depositphotos_51535791-stock-photo-kitten-with-a-pink-bow.jpg">
+    <img width="120px" height="110px" src="https://st.depositphotos.com/1032124/3111/i/950/depositphotos_31113355-stock-photo-the-cat-with-a-pink.jpg">
+    <img width="100px" height="90px"  src="https://thumbs.dreamstime.com/z/gatinho-branco-com-uma-fita-cor-de-rosa-em-um-fundo-branco-31770958.jpg">
+    <img height="100px" width="110px"  src="https://st.depositphotos.com/1032124/5153/i/950/depositphotos_51535791-stock-photo-kitten-with-a-pink-bow.jpg">
+    <img width="120px" height="110px" src="https://st.depositphotos.com/1032124/3111/i/950/depositphotos_31113355-stock-photo-the-cat-with-a-pink.jpg">
+    <img width="100px" height="90px"  src="https://thumbs.dreamstime.com/z/gatinho-branco-com-uma-fita-cor-de-rosa-em-um-fundo-branco-31770958.jpg">
+    <img height="100px" width="110px"  src="https://st.depositphotos.com/1032124/5153/i/950/depositphotos_51535791-stock-photo-kitten-with-a-pink-bow.jpg">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<div style="display: flex;
+justify-content: center;
+align-items: center;">
+
+    <h1 style="color: aqua;">Atenção!</h1>
+    <h2>Esse é um site de treino e de código livre! </h2>
+    <h2>Feito por: Júlia Miranda / 1aMeya</h2>
+    
+</div>
+
+<script>
+
+
+    function apagar(){
+        localStorage.removeItem('meuDiario');
+        //remove lá o item
+        document.getElementById('mostra').innerText='';
+        //atualiza para mostrar isso dentro do mostra
+        document.getElementById('diario').value='';
+        //atualiza também
+
+    }
+
+    function salvar(){
+        let texto=document.getElementById('diario').value;
+        // cria uma variavel que é o que está dentro do diario
+        localStorage.setItem('meuDiario',texto);
+        //ai você vai criar um item com aquele valor da variavel
+        mostrar();
+        //chama a outra função
+    }
+
+    function mostrar(){
+        let salvo = localStorage.getItem('meuDiario');
+        //cria uma nova variavel, e pega o que está escrito que salvamos anteriormente.
+        document.getElementById('mostra').innerText=salvo;
+        //agora pega e deixa a mesma coisa nos dois.
+
+    }
+
+   
+
+
+</script>
+
+
+</body>
+</html>
